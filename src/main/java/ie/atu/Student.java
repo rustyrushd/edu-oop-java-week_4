@@ -12,4 +12,14 @@ public class Student
         this.studentEmail = stEmail;
         this.studentId = stId;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Student{" +
+                "studentName='" + studentName + '\'' +
+                ", studentEmail='" + studentEmail + '\'' +
+                ", studentId='" + studentId + '\'' +
+                '}';
+    }
 }
