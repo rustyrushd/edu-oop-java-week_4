@@ -28,6 +28,8 @@ public class StudentApp
         }
         scan1.close();
 
-        System.out.println(studentList);
+        for (Student student : studentList) {
+            System.out.println(student);
+        }
     }
 }
