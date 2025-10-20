@@ -20,7 +20,17 @@ public class StudentApp
             System.out.println("Please enter Student name: ");
             String name = scan1.nextLine();
             System.out.println("Please enter Student email");
-            String email = scan1.nextLine();
+            String email = scan1.nextLine().toLowerCase().trim();
+
+            // check if email already exists and keep prompting until a unique email is entered
+            for (int j = 0; j < studentList.size(); j++) {
+                while (studentList.get(j).getEmail().equals(email)) {
+                    System.out.println("That email is already in the system. Please enter another email:");
+                    email = scan1.nextLine().toLowerCase().trim();
+                    j = 0;
+                }
+            }
+
             System.out.println("Please enter Student ID");
             String id = scan1.nextLine();
             Student student1 = new Student(name, email, id);
