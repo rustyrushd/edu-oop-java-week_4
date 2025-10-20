@@ -13,6 +13,11 @@ public class Student
         this.studentId = stId;
     }
 
+    public String getEmail()
+    {
+        return studentEmail;
+    }
+
     @Override
     public String toString()
     {
