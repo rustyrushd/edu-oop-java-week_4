@@ -19,7 +19,7 @@ public class StudentApp
         for (int i = 0; i < count; i++) {
             System.out.println("Please enter Student name: ");
             String name = scan1.nextLine();
-            System.out.println("Please enter Student email");
+            System.out.println("Please enter Student email: ");
             String email = scan1.nextLine().toLowerCase().trim();
 
             // check if email already exists and keep prompting until a unique email is entered
@@ -31,9 +31,9 @@ public class StudentApp
                 }
             }
 
-            System.out.println("Please enter Student ID");
-            String id = scan1.nextLine();
-            Student student1 = new Student(name, email, id);
+            System.out.println("Please enter Course: ");
+            String course = scan1.nextLine();
+            Student student1 = new Student(name, email, course);
             studentList.add(student1);
         }
 

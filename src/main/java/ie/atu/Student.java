@@ -2,29 +2,29 @@ package ie.atu;
 
 public class Student
 {
-    private String studentName;
-    private String studentEmail;
-    private String studentId;
+    private final String STUDENT_NAME;
+    private final String STUDENT_EMAIL;
+    private final String STUDENT_COURSE;
 
     public Student(String stName, String stEmail, String stId)
     {
-        this.studentName = stName;
-        this.studentEmail = stEmail;
-        this.studentId = stId;
+        this.STUDENT_NAME = stName;
+        this.STUDENT_EMAIL = stEmail;
+        this.STUDENT_COURSE = stId;
     }
 
     public String getEmail()
     {
-        return studentEmail;
+        return STUDENT_EMAIL;
     }
 
     @Override
     public String toString()
     {
         return "Student{" +
-                "studentName='" + studentName + '\'' +
-                ", studentEmail='" + studentEmail + '\'' +
-                ", studentId='" + studentId + '\'' +
+                " Name = '" + STUDENT_NAME + '\'' +
+                ", Email = '" + STUDENT_EMAIL + '\'' +
+                ", Course = '" + STUDENT_COURSE + '\'' +
                 '}';
     }
 }
