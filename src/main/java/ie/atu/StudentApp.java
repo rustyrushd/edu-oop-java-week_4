@@ -15,10 +15,11 @@ public class StudentApp
         int count = scan1.nextInt();
         scan1.nextLine();
 
-        // prompt user for count number of students
+        // prompt user for count number of students and attribute input
         for (int i = 0; i < count; i++) {
             System.out.println("Please enter Student name: ");
-            String name = scan1.nextLine();
+            String name = firstCap(scan1.nextLine().toLowerCase().trim());
+
             System.out.println("Please enter Student email: ");
             String email = scan1.nextLine().toLowerCase().trim();
 
@@ -32,8 +33,9 @@ public class StudentApp
             }
 
             System.out.println("Please enter Course: ");
-            String course = scan1.nextLine();
+            String course = firstCap(scan1.nextLine().toLowerCase().trim());
             Student student1 = new Student(name, email, course);
+
             studentList.add(student1);
         }
 
@@ -42,5 +44,13 @@ public class StudentApp
         for (Student student : studentList) {
             System.out.println(student);
         }
+    }
+
+    // capitalizes the first letter in a String
+    static String firstCap(String text)
+    {
+        char fLetter = Character.toUpperCase(text.charAt(0));
+        String rest = text.substring(1);
+        return fLetter +  rest;
     }
 }
