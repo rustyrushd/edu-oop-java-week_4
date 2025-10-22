@@ -1,3 +1,17 @@
+/*
+ * A Java app that creates and stores (in memory) student information: name, email and course.
+ * The app takes looped user input to instantiate objects with class attributes and then stores these student objects
+ * in an ArrayList.
+ * Before instantiation, it is ensured that the first letter of name and course is capitalized.
+ * Also a check for duplicated email is made and if true, reprompts the user for a unique email.
+ * The ArrayList is printed back to the user using a for-each loop and toString().
+ *
+ * Author: rgm
+ *
+ * [1.2.1] - 2025-10-21
+ */
+
+
 package ie.atu;
 
 import java.util.ArrayList;
